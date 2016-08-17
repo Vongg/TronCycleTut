@@ -5,15 +5,15 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
-public class StartOption extends Button{
-	
+public class ExitOption extends Button{
+
 	private GameLabel label;
 	
-	public StartOption(final ClickCallback callback){
+	public ExitOption(final ClickCallback callback){
 		super(prepareResetButtonStyle());
 		
 		label = new GameLabel();
-		label.setPosition(335, 320);
+		label.setPosition(335, 270);
 		
 		init(callback);
 	}
@@ -22,7 +22,7 @@ public class StartOption extends Button{
 		this.setWidth(100);
 		this.setHeight(40);
 		this.setX(300);
-		this.setY(300);
+		this.setY(255);
 		this.setDebug(true);
 		
 		this.addListener(new ClickListener(){
@@ -46,5 +46,5 @@ public class StartOption extends Button{
 		
 		return buttonStyle;
 	} 
-
+	
 }

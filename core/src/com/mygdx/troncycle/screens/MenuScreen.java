@@ -2,11 +2,13 @@ package com.mygdx.troncycle.screens;
 
 import com.mygdx.troncycle.TronCycle;
 import com.mygdx.troncycle.ui.ClickCallback;
+import com.mygdx.troncycle.ui.ExitOption;
 import com.mygdx.troncycle.ui.StartOption;
 
 public class MenuScreen extends AbstractScreen{
 	
 	private StartOption startOption;
+	private ExitOption exitOption;
 
 	public MenuScreen(TronCycle game) {
 		super(game);
@@ -14,7 +16,8 @@ public class MenuScreen extends AbstractScreen{
 	}
 
 	private void init() {
-		initStartOption();	
+		initStartOption();
+		initExitOption();
 	}
 
 	private void initStartOption() {
@@ -22,12 +25,24 @@ public class MenuScreen extends AbstractScreen{
 			
 			@Override
 			public void onClick() {
-				System.out.println("clicked");
 				game.setScreen(new GameplayScreen(game));
 			}
 		});
 		stage.addActor(startOption);
 		startOption.showDialog(stage, "Start");
+	}
+	
+	private void initExitOption() {
+		exitOption = new ExitOption(new ClickCallback() {
+			
+			@Override
+			public void onClick() {
+				System.out.println("clicked");
+				
+			}
+		});
+		stage.addActor(exitOption);
+		exitOption.showDialog(stage, "Exit");
 	}
 	
 	@Override
