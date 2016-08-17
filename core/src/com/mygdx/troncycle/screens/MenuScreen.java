@@ -1,11 +1,12 @@
 package com.mygdx.troncycle.screens;
 
 import com.mygdx.troncycle.TronCycle;
-import com.mygdx.troncycle.entities.Player;
+import com.mygdx.troncycle.ui.ClickCallback;
+import com.mygdx.troncycle.ui.StartOption;
 
 public class MenuScreen extends AbstractScreen{
 	
-	private com.mygdx.troncycle.entities.Player player;
+	private StartOption startOption;
 
 	public MenuScreen(TronCycle game) {
 		super(game);
@@ -13,12 +14,20 @@ public class MenuScreen extends AbstractScreen{
 	}
 
 	private void init() {
-		initPlayer();
+		initStartOption();	
 	}
 
-	private void initPlayer() {
-		player = new Player();
-		stage.addActor(player);
+	private void initStartOption() {
+		startOption = new StartOption(new ClickCallback() {
+			
+			@Override
+			public void onClick() {
+				System.out.println("clicked");
+				game.setScreen(new GameplayScreen(game));
+			}
+		});
+		stage.addActor(startOption);
+		startOption.showDialog(stage, "Start");
 	}
 	
 	@Override

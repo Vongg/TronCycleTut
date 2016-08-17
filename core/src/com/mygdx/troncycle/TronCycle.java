@@ -8,8 +8,8 @@ public class TronCycle extends Game {
 	
 	public final static String GAME_NAME = "Tron Cycle";
 	
-	public final static int WIDTH = 800;
-	public final static int HEIGHT = 400;
+	public final static int WIDTH = 700;
+	public final static int HEIGHT = 480;
 	
 	private boolean paused;
 	

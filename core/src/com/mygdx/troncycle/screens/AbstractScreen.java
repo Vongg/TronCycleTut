@@ -7,7 +7,8 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
-import com.mygdx.troncycle.TronCycle;
+
+import com.mygdx.troncycle.TronCycle;;
 
 public abstract class AbstractScreen implements Screen{
 	
