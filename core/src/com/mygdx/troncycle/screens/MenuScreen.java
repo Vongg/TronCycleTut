@@ -1,5 +1,6 @@
 package com.mygdx.troncycle.screens;
 
+import com.badlogic.gdx.Gdx;
 import com.mygdx.troncycle.TronCycle;
 import com.mygdx.troncycle.ui.ClickCallback;
 import com.mygdx.troncycle.ui.ExitOption;
@@ -37,8 +38,7 @@ public class MenuScreen extends AbstractScreen{
 			
 			@Override
 			public void onClick() {
-				System.out.println("clicked");
-				
+				Gdx.app.exit();
 			}
 		});
 		stage.addActor(exitOption);
